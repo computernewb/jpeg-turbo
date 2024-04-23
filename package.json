@@ -1,0 +1,31 @@
+{
+  "name": "@computernewb/jpeg-turbo",
+  "version": "2.1.0",
+  "description": "Limited libjpeg-turbo bindings for Node.js.",
+  "keywords": [
+    "jpeg",
+    "jpeg-turbo",
+    "libjpeg-turbo"
+  ],
+  "license": "Apache-2.0",
+  "binary": {
+    "napi_versions": [
+      7
+    ]
+  },
+  "engines": {
+    "node": ">=14.15"
+  },
+  "main": "./index.js",
+  "types": "./module.d.ts",
+  "dependencies": {
+    "cmake-js": "^7.2.0",
+    "node-addon-api": "^6.0.0"
+  },
+  "scripts": {
+    "install": "cmake-js compile --target jpeg-turbo",
+    "rebuild": "cmake-js rebuild --target jpeg-turbo"
+  },
+  "devDependencies": {
+  }
+}
